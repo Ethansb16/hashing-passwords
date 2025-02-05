@@ -3,7 +3,6 @@ import hashlib
 import random
 import string
 from matplotlib import pyplot as plt
-from binascii import unhexlify
 
 def sha256_hash(data):
     hash_object = hashlib.sha256(data.encode())
@@ -15,7 +14,7 @@ def random_string(length=10):
 
 def find_collision():
 
-    bit_range = [i for i in range(8, 48, 4)]
+    bit_range = [i for i in range(8, 49, 4)]
     elapsed_times = []
     counts = []
     for bits in bit_range:
